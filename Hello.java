@@ -32,16 +32,21 @@ class Hello
             lst.DeleteLast();
             lst.DeleteLast();
             */
+            //lst.DeleteAt(3);
+            //System.out.println("Head: "+lst.head());
             
+            //lst.DeleteAt(5);
             System.out.print("Values: ");
             lst.Display();
             System.out.println("Head: "+lst.head());
             System.out.println("Tail: "+lst.tail());
             System.out.println("Size: "+lst.len());
+            lst.DeleteAt(1);
+            lst.Display();
         }
         catch(NullPointerException e)
         {
-            System.out.println("-----> either the LIST is EMPTY or the referencing object is NULL <------");
+            System.out.println("-----> either the LIST is EMPTY or the referencing object is NULL <------ "+e);
         }
     }    
 

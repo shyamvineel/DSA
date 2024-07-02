@@ -127,9 +127,28 @@ public class singleLinkedList {
         tail.next = null;
     }
     void DeleteAt(int pos){
+        Node temp = head;
+        
         if(head == null){
-            System.out.println("LIST ALREADY EMPTY");
+            System.out.println("INVALID POSITION");
         }
+        if(pos<2){
+            if(head.next == null){
+                head = null;
+            }
+            temp = head.next;
+            head = temp;
+        }
+        pos--;
+        while(temp.next!=null && pos > 1){
+            temp = temp.next;
+            pos--; 
+        }
+        temp.next = temp.next.next;
+        
+        
+
+        
         
     }
 
